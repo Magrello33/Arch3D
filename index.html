@@ -885,26 +885,35 @@ body{
     gap:15px;
 }
 
-.photo{
+.galleryPhoto{
+
+    width:100%;
 
     aspect-ratio:4 / 3;
 
     border-radius:18px;
 
-    background:
-    linear-gradient(
-        135deg,
-        #dce6eb,
-        #9aaeb8
-    );
+    background:#dce6eb;
 
-    display:flex;
+    overflow:hidden;
+}
 
-    align-items:center;
+.galleryPhoto img{
 
-    justify-content:center;
+    width:100%;
 
-    font-size:35px;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.3s;
+}
+
+.galleryPhoto img:hover{
+
+    transform:scale(1.04);
 }
 
 
@@ -1136,6 +1145,13 @@ footer{
 
         padding:10px 5px;
     }
+
+    .gallery{
+
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
 }
 
 @media(max-width:600px){
@@ -1205,7 +1221,25 @@ footer{
 
         grid-template-columns:
         repeat(2,1fr);
+
+        gap:10px;
     }
+
+}
+
+
+/* ================================
+   GALERIA EM TELAS MUITO PEQUENAS
+================================ */
+
+@media(max-width:380px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
 }
 
 </style>
@@ -1550,9 +1584,7 @@ footer{
     <div class="professorGrid">
 
 
-        <!-- ==========================================
-             PROFESSOR 1
-        =========================================== -->
+        <!-- PROFESSOR 1 -->
 
         <div class="professorCard">
 
@@ -1588,9 +1620,7 @@ footer{
         </div>
 
 
-        <!-- ==========================================
-             PROFESSOR 2
-        =========================================== -->
+        <!-- PROFESSOR 2 -->
 
         <div class="professorCard">
 
@@ -1626,9 +1656,7 @@ footer{
         </div>
 
 
-        <!-- ==========================================
-             PROFESSOR 3
-        =========================================== -->
+        <!-- PROFESSOR 3 -->
 
         <div class="professorCard">
 
@@ -1971,8 +1999,9 @@ footer{
 
 <!-- =====================================================
      GALERIA
-===================================================== --
-   <section class="section">
+===================================================== -->
+
+<section class="section" id="galeria">
 
     <h2 class="sectionTitle">
         📸 Galeria
@@ -1985,27 +2014,39 @@ footer{
     <div class="gallery">
 
         <div class="galleryPhoto">
-            <img src="1.png" alt="Conteúdo do curso">
+            <img
+                src="1.png"
+                alt="Conteúdo do curso">
         </div>
 
         <div class="galleryPhoto">
-            <img src="2.png" alt="Conteúdo do curso">
+            <img
+                src="2.png"
+                alt="Conteúdo do curso">
         </div>
 
         <div class="galleryPhoto">
-            <img src="3.png" alt="Conteúdo do curso">
+            <img
+                src="3.png"
+                alt="Conteúdo do curso">
         </div>
 
         <div class="galleryPhoto">
-            <img src="4.png" alt="Conteúdo do curso">
+            <img
+                src="4.png"
+                alt="Conteúdo do curso">
         </div>
 
         <div class="galleryPhoto">
-            <img src="5.png" alt="Conteúdo do curso">
+            <img
+                src="5.png"
+                alt="Conteúdo do curso">
         </div>
 
         <div class="galleryPhoto">
-            <img src="6.png" alt="Conteúdo do curso">
+            <img
+                src="6.png"
+                alt="Conteúdo do curso">
         </div>
 
     </div>
